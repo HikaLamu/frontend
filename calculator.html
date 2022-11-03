@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: chocolate;
+            
+        }
+       
+        .inputs{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Calculator</h2>
+        <p>
+            <input type="number" id="num1" class="inputs"/>
+            <br>
+            <input type="number" id="num2" class="inputs"/>
+            <br>
+            <button id = "adds" class="button">+</button>
+            <button id = "sub" class="button">-</button>
+            <br>
+            <button id = "mult" class="button">x</button>
+            <button id = "divd" class="button">/</button>
+            <br>
+         <input type="number" id="result" class="inputs" /> 
+        </p>
+    </div>
+    <script>
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const result = document.getElementById("result");
+        
+
+        document.getElementById("adds").addEventListener("click", function(){
+            let string = num1.value + "+" +num2.value;
+            result.value = eval(string);
+        });
+        document.getElementById("sub").addEventListener("click", function(){
+           result.value = (num1.value-num2.value);
+        });
+        document.getElementById("mult").addEventListener("click", function(){
+           result.value = (num1.value * num2.value);
+        });
+        document.getElementById("divd").addEventListener("click", function(){
+           result.value = (num1.value / num2.value);
+        });
+
+    </script>
+
+    
+</body>
+</html>
